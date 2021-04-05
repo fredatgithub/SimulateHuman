@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 
 namespace SimulateHuman
@@ -49,6 +50,14 @@ namespace SimulateHuman
       }
 
       return result;
+    }
+
+    public static DateTime GenerateRandomTime()
+    {
+      int numberOfSeconds = GenerateRndNumberUsingCrypto(1, 59);
+      int numberOfMinutes = GenerateRndNumberUsingCrypto(0, 59);
+      DateTime nextTime = new DateTime(1, 1, 1, 0, numberOfMinutes, numberOfSeconds);
+      return nextTime;
     }
   }
 }

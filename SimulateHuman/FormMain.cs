@@ -721,7 +721,6 @@ namespace SimulateHuman
       int numberOfMinutes = HelperClasses.GenerateRndNumberUsingCrypto(0, 59);
       DateTime nextTime = new DateTime(1, 1, 1, 0, numberOfMinutes, numberOfSeconds);
       listBoxResult.Items.Add(nextTime.ToLongTimeString());
-      //Thread.Sleep(numberOfMinutes + numberOfSeconds);
       for (int i = 0; i < 10; i++)
       {
         numberOfSeconds = HelperClasses.GenerateRndNumberUsingCrypto(1, 59);
